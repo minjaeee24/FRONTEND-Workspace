@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 관련 스타일</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+        #div-bg{
+            background-color: white;
+            border: 30px solid blue;
+            padding: 20px;
+            width: 50%;
+            /* div의 content의 가로길이는 부모(body)요소의 50%로 지정하겠다. */
+            box-sizing: border-box;
+            /* 가로길이를 border까지 포함해서 지정하겠다 라는 뜻 */
+        }
+        .div-test{
+            margin: 30px;
+            border: 10px dashed;
+            padding: 20px;
+            background-color: yellow;
+        }
+        #div1{
+            background-clip: border-box; /* 기본값 */
+        }
+        #div2{
+            background-clip: padding-box;
+        }
+        #div3{
+            background-clip: content-box;
+        }
+        #bg-img{
+            border: 1px solid black;
+            width: 70%;
+            height: 800px;
+
+            background-image: url("resources/image/bono.jpg");
+            background-repeat: repeat-y; /* 사진들이 세로로만 반복됨 */
+            background-size: contain; /* 가로 세로 상관없이 둘 중에 하나가 가득 찰 때까지 크기를 맞춰줌 */
+            background-position: 50% 50%; /* center center 또는 50px 50px */
+            background-attachment: fixed; /* 스크롤 이동이 있어도 그 자리 그대로 고정 */
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>배경 관련 스타일(background~)</h1>
+
+    <h3>background-color : 배경색을 지정하고자 할때 사용</h3>
+    <div id="div-bg">
+        심장의 새 물방아 이상, 수 찾아 끓는다. 꽃이 꽃 곳이 약동하다. 피가 때까지 피고 황금시대다. 없으면 갑 황금시대를 바로 것은 이상의 피가 방황하였으며, 노래하며 봄바람이다. 불어 생명을 불러 넣는 그와 청춘은 따뜻한 그들은 충분히 말이다. 예가 실현에 못할 인류의 원대하고, 아름다우냐? 것이다.보라, 가치를 그들의 투명하되 동산에는 석가는 역사를 광야에서 착목한는 부패뿐이다. 끓는 우는 스며들어 오직 설레는 인간에 같지 어디 청춘 봄바람이다. 사랑의 뭇 같이, 들어 과실이 끓는 살았으며, 것이다. 싹이 현저하게 보이는 생명을 따뜻한 찾아다녀도, 때문이다.
+    </div>
+
+    <br>
+
+    <h3>background-clip : 배경을 적용시키고자 하는 범위를 지정할때 사용</h3>
+    <pre>
+        선택자{
+            background-clip: border-box(기본값)/padding-box/content-box;
+        }
+    </pre>
+
+    <div class="div-test" id="div1">
+        심장의 새 물방아 이상, 수 찾아 끓는다. 꽃이 꽃 곳이 약동하다. 피가 때까지 피고 황금시대다. 없으면 갑 황금시대를 바로 것은 이상의 피가 방황하였으며, 노래하며 봄바람이다. 불어 생명을 불러 넣는 그와 청춘은 따뜻한 그들은 충분히 말이다. 예가 실현에 못할 인류의 원대하고, 아름다우냐? 것이다.보라, 가치를 그들의 투명하되 동산에는 석가는 역사를 광야에서 착목한는 부패뿐이다. 끓는 우는 스며들어 오직 설레는 인간에 같지 어디 청춘 봄바람이다. 사랑의 뭇 같이, 들어 과실이 끓는 살았으며, 것이다. 싹이 현저하게 보이는 생명을 따뜻한 찾아다녀도, 때문이다.
+
+    </div>
+    <div class="div-test" id="div2">
+        심장의 새 물방아 이상, 수 찾아 끓는다. 꽃이 꽃 곳이 약동하다. 피가 때까지 피고 황금시대다. 없으면 갑 황금시대를 바로 것은 이상의 피가 방황하였으며, 노래하며 봄바람이다. 불어 생명을 불러 넣는 그와 청춘은 따뜻한 그들은 충분히 말이다. 예가 실현에 못할 인류의 원대하고, 아름다우냐? 것이다.보라, 가치를 그들의 투명하되 동산에는 석가는 역사를 광야에서 착목한는 부패뿐이다. 끓는 우는 스며들어 오직 설레는 인간에 같지 어디 청춘 봄바람이다. 사랑의 뭇 같이, 들어 과실이 끓는 살았으며, 것이다. 싹이 현저하게 보이는 생명을 따뜻한 찾아다녀도, 때문이다.
+
+    </div>
+    <div class="div-test" id="div3">
+        심장의 새 물방아 이상, 수 찾아 끓는다. 꽃이 꽃 곳이 약동하다. 피가 때까지 피고 황금시대다. 없으면 갑 황금시대를 바로 것은 이상의 피가 방황하였으며, 노래하며 봄바람이다. 불어 생명을 불러 넣는 그와 청춘은 따뜻한 그들은 충분히 말이다. 예가 실현에 못할 인류의 원대하고, 아름다우냐? 것이다.보라, 가치를 그들의 투명하되 동산에는 석가는 역사를 광야에서 착목한는 부패뿐이다. 끓는 우는 스며들어 오직 설레는 인간에 같지 어디 청춘 봄바람이다. 사랑의 뭇 같이, 들어 과실이 끓는 살았으며, 것이다. 싹이 현저하게 보이는 생명을 따뜻한 찾아다녀도, 때문이다.
+
+    </div>
+
+    <h3>배경 이미지 테스트</h3>
+
+    <pre>
+        선택자 {
+            background-image: url(이미지경로);
+            background-repeat: repeat/repeat-x/repeat-y/no-repeat;
+            background-size: auto/contain/cover/px px/%;
+            background-position: 좌/우/가운데 중 1 위/아래/가운데 중 1 px/% %;
+            background-attachment: scroll/fixed;
+        }
+    </pre>
+
+    <div id="bg-img"></div>
+
+</body>
+</html>
